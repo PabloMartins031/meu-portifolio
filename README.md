@@ -1,72 +1,69 @@
 # ⚔️ Dev Samurai — Portfólio Cyberpunk
 
-Portfólio profissional com temática samurai/cyberpunk desenvolvido para apresentar projetos, habilidades, identidade visual e evolução como desenvolvedor front-end/full-stack.
+Portfólio profissional desenvolvido para apresentar minha trajetória, habilidades e projetos como desenvolvedor Full Stack.
 
-O projeto foi criado com foco em experiência visual moderna, arquitetura organizada e boas práticas de desenvolvimento web.
+Inspirado na estética samurai e cyberpunk, o projeto combina design futurista, efeitos visuais modernos e uma arquitetura de código organizada, proporcionando uma experiência visual marcante e responsiva.
 
 ---
 
-# 🚀 Preview
+## 🚀 Preview
 
 Em desenvolvimento...
 
 ---
 
-# 🎨 Conceito do Projeto
+## 🎨 Conceito
 
-O Dev Samurai foi criado para unir:
+O Dev Samurai nasceu da união entre tecnologia e identidade visual, combinando:
 
-- estética cyberpunk
-- identidade samurai
-- interface futurista
-- animações neon
-- navegação moderna
-- experiência visual imersiva
+* Estética cyberpunk
+* Inspiração samurai
+* Interface futurista
+* Efeitos neon
+* Navegação moderna
+* Experiência visual imersiva
 
-A proposta é transformar um portfólio comum em uma experiência visual marcante.
-
----
-
-# 🛠️ Tecnologias Utilizadas
-
-## Front-end
-
-- HTML5
-- CSS3
-- JavaScript
-
-## Ferramentas
-
-- Git
-- GitHub
-- VS Code
-
-## Bibliotecas
-
-- Font Awesome
+O objetivo é transformar um portfólio tradicional em uma experiência visual diferenciada, destacando tanto as habilidades técnicas quanto a criatividade no desenvolvimento de interfaces.
 
 ---
 
-# ✨ Funcionalidades
+## 🛠️ Tecnologias Utilizadas
 
-- ✅ Layout cyberpunk responsivo
-- ✅ Navegação lateral fixa
-- ✅ Efeitos neon
-- ✅ Hover animations
-- ✅ Scroll suave
-- ✅ Estrutura modular
-- ✅ Separação de páginas
-- ✅ Cards animados
-- ✅ Sessão sobre personalizada
-- ✅ Sessão de habilidades
-- ✅ Sessão de projetos
-- ✅ Sessão de contato
-- ✅ Organização profissional de assets
-- ✅ Versionamento com Git/GitHub
+### Front-end
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Ferramentas
+
+* Git
+* GitHub
+* Visual Studio Code
+
+### Bibliotecas
+
+* Font Awesome
 
 ---
 
-# 📁 Estrutura do Projeto
+## ✨ Funcionalidades
+
+* Layout responsivo
+* Navegação lateral fixa
+* Efeitos visuais neon
+* Animações e transições suaves
+* Estrutura modular de páginas
+* Seção Sobre
+* Seção de Habilidades
+* Seção de Projetos
+* Seção de Contato
+* Organização profissional de assets
+* Versionamento com Git e GitHub
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```bash
 meu-portifolio/
@@ -74,112 +71,114 @@ meu-portifolio/
 ├── index.html
 ├── habilidades.html
 ├── projetos.html
+├── contato.html
 ├── README.md
 │
 ├── assets/
-│   │
 │   ├── css/
 │   │   ├── style.css
 │   │   ├── habilidades.css
-│   │   └── projetos.css
+│   │   ├── projetos.css
+│   │   └── contato.css
 │   │
 │   ├── js/
 │   │   └── scripts.js
 │   │
 │   ├── images/
-│   │
 │   ├── icons/
-│   │
 │   └── certificates/
 ```
+
 ---
 
-# 🧠 Aprendizados Aplicados
+## 🧠 Aprendizados Aplicados
 
 Durante o desenvolvimento foram aplicados conceitos como:
 
-- arquitetura de pastas
-- modularização
-- responsividade
-- Git Flow básico
-- criação de branches
-- organização de assets
-- separação de responsabilidades
-- versionamento profissional
-- estrutura escalável
-- UI/UX visual
+* Organização de projetos Front-end
+* Arquitetura de pastas
+* Modularização de estilos
+* Responsividade
+* Git Flow básico
+* Criação e gerenciamento de branches
+* Organização de assets
+* Separação de responsabilidades
+* Versionamento profissional
+* Estruturas escaláveis
+* Boas práticas de UI/UX
 
 ---
 
-# 🌌 Identidade Visual
+## 🌌 Identidade Visual
 
-O design utiliza:
+O projeto utiliza uma paleta inspirada no universo cyberpunk:
 
-- preto
-- vermelho neon
-- cinza escuro
-- glow effects
-- elementos futuristas
-- inspiração samurai/cyberpunk
-
----
-
-# 📱 Responsividade
-
-O projeto está sendo adaptado para:
-
-- desktops
-- notebooks
-- tablets
-- smartphones
+* Preto
+* Vermelho neon
+* Tons de cinza
+* Glow effects
+* Elementos futuristas
+* Referências à cultura samurai
 
 ---
 
-# 🔥 Melhorias Futuras
+## 📱 Responsividade
 
-- Sistema de tema dinâmico
-- Transições entre páginas
-- Loading screen animada
-- Integração com APIs
-- Sessão de certificados
-- Modo multilíngue
-- Deploy final no GitHub Pages
-- SEO básico
-- Melhor acessibilidade
+O portfólio está sendo desenvolvido para oferecer uma boa experiência em:
+
+* Desktop
+* Notebook
+* Tablet
+* Smartphone
 
 ---
 
-# 🌐 Deploy
+## 🔥 Melhorias Futuras
+
+* Sistema de temas
+* Transições entre páginas
+* Tela de carregamento animada
+* Integração com APIs
+* Seção de certificados
+* Internacionalização (PT-BR / EN)
+* SEO básico
+* Melhor acessibilidade
+* Deploy definitivo
+
+---
+
+## 🌐 Deploy
 
 Em desenvolvimento...
 
 ---
 
-# 📌 Objetivo
+## 📌 Objetivo
 
-Criar um portfólio profissional moderno e visualmente impactante para apresentar:
+Criar um portfólio moderno, organizado e visualmente impactante para apresentar:
 
-- projetos
-- habilidades
-- evolução técnica
-- identidade visual
-- capacidade de organização de código
+* Projetos
+* Habilidades técnicas
+* Evolução profissional
+* Organização de código
+* Conhecimentos em Front-end e Full Stack
 
 ---
 
-# ⚔️ Autor
+## ⚔️ Autor
 
-## Pablo Martins
+### Pablo Martins
 
 Desenvolvedor focado em:
-- Front-end
-- Full-stack
-- Interfaces modernas
-- Experiência visual
-- Desenvolvimento web
+
+* Desenvolvimento Front-end
+* Desenvolvimento Full Stack
+* Interfaces modernas
+* Experiência do usuário (UX)
+* Aplicações Web
 
 ---
 
-# 📜 Licença
+## 📜 Licença
 
-Projeto desenvolvido para fins de estudo, prática e apresentação profissional.
+Este projeto foi desenvolvido para fins de estudo, prática e apresentação profissional.
