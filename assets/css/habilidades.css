@@ -13,8 +13,8 @@
 .cards{
     display: grid;
     grid-template-columns: 
-    repeat(auto-fit,minmax(260px,1fr)) ;
-    gap: 205px;
+    repeat(auto-fit,minmax(310px,1fr)) ;
+    gap: 150px;
 }
 .card{
     position:relative;
