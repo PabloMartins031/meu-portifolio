@@ -19,7 +19,7 @@ Inspirado na estética <strong>Samurai</strong> e <strong>Cyberpunk</strong>, o 
 ## 🏠 Página Inicial
 
 <p align="center">
-<img src="assets/images/readme/home.png" width="900">
+<img src="assets/readme/home.PNG" width="900">
 </p>
 
 ---
@@ -28,9 +28,9 @@ Inspirado na estética <strong>Samurai</strong> e <strong>Cyberpunk</strong>, o 
 
 <p align="center">
 
-<img src="assets/images/readme/sobre.png" width="48%">
+<img src="assets/readme/sobre.PNG" width="48%">
 
-<img src="assets/images/readme/habilidades.png" width="48%">
+<img src="assets/readme/habilidades.PNG" width="48%">
 
 </p>
 
@@ -38,7 +38,7 @@ Inspirado na estética <strong>Samurai</strong> e <strong>Cyberpunk</strong>, o 
 
 <img src="assets/readme/Projetos.PNG" width="48%">
 
-<img src="assets/images/readme/contato.png" width="48%">
+<img src="assets/readme/contato.PNG" width="48%">
 
 </p>
 
