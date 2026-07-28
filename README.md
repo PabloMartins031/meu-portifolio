@@ -1,7 +1,7 @@
 # ⚔️ Dev Samurai — Portfólio Cyberpunk
 
 <p align="center">
-  <img src="assets/images/readme/banner.png" alt="Banner Dev Samurai">
+  <img src="assets/readme/samurai.png" alt="Banner Dev Samurai">
 </p>
 
 <p align="center">
@@ -47,7 +47,7 @@ Inspirado na estética <strong>Samurai</strong> e <strong>Cyberpunk</strong>, o 
 # 🎥 Demonstração
 
 <p align="center">
-<img src="assets/images/readme/demo.gif" width="900">
+<img src="assets/readme/video.gif" width="900">
 </p>
 
 ---
