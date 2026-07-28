@@ -36,7 +36,7 @@ Inspirado na estética <strong>Samurai</strong> e <strong>Cyberpunk</strong>, o 
 
 <p align="center">
 
-<img src="assets/images/readme/projetos.png" width="48%">
+<img src="assets/readme/Projetos.PNG" width="48%">
 
 <img src="assets/images/readme/contato.png" width="48%">
 
