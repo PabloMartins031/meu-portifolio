@@ -107,7 +107,8 @@ html{
 .social{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    padding: 100px;
 }
 .social a{
     color: #aaa;
@@ -554,4 +555,25 @@ html{
 
         max-width: 280px;
     }
+}
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
 }

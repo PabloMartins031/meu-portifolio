@@ -223,3 +223,20 @@ titulo
 .project-card:hover .project-description{
     max-height: 200px;
 }
+.reveal{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
