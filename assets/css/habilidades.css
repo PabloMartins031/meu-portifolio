@@ -143,3 +143,210 @@
     transform: translateY(0);
 
 }
+
+/* =========================================
+   RESPONSIVIDADE — HABILIDADES
+   DEV SAMURAI
+========================================= */
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .skills {
+        padding: 80px 30px;
+    }
+
+    .skills h2 {
+        font-size: 45px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card i {
+        font-size: 34px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .skills {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .skills h2 {
+        font-size: clamp(32px, 9vw, 42px);
+
+        text-align: center;
+
+        margin-bottom: 45px;
+
+        letter-spacing: 2px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .card {
+        padding: 25px;
+
+        width: 100%;
+    }
+
+    .card i {
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 480px) {
+
+    .skills {
+        padding: 55px 15px;
+    }
+
+    .skills h2 {
+        font-size: 30px;
+
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card i {
+        font-size: 29px;
+
+        margin-bottom: 18px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+
+        margin-bottom: 13px;
+    }
+
+    .card p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 360px) {
+
+    .skills {
+        padding: 45px 10px;
+    }
+
+    .skills h2 {
+        font-size: 27px;
+
+        letter-spacing: 1px;
+    }
+
+    .cards {
+        gap: 18px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card i {
+        font-size: 27px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
