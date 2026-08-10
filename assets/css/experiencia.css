@@ -1,0 +1,308 @@
+/* =========================================
+   EXPERIÊNCIAS
+   Dev Samurai — Cyberpunk
+========================================= */
+
+.experiencias {
+    min-height: 100vh;
+    padding: 80px 40px;
+}
+
+.experiencias h2 {
+    font-size: 50px;
+    color: #ff0000;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px #ff000050;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.experiencias-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(310px, 1fr));
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.experiencia-card {
+
+    position: relative;
+
+    background: rgba(15, 15, 15, 0.9);
+
+    border: 1px solid #222;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    transition: 0.5s;
+
+    z-index: 1;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.experiencia-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ff0000;
+
+    box-shadow:
+        0 0 20px #ff000020,
+        0 0 40px #ff000010;
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+.experiencia-card i {
+
+    font-size: 38px;
+
+    color: #ff0000;
+
+    margin-bottom: 25px;
+
+    display: block;
+
+    text-shadow:
+        0 0 10px #ff000050;
+}
+
+
+/* =========================================
+   PERÍODO
+========================================= */
+
+.experiencia-periodo {
+
+    color: #ff0000;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CARGO
+========================================= */
+
+.experiencia-card h3 {
+
+    font-size: 24px;
+
+    color: white;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   EMPRESA
+========================================= */
+
+.experiencia-empresa {
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.experiencia-card p {
+
+    color: #aaa;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TECNOLOGIAS
+========================================= */
+
+.experiencia-techs {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.experiencia-techs span {
+
+    border: 1px solid #ff0000;
+
+    color: #ff0000;
+
+    padding: 8px 14px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.4s;
+}
+
+.experiencia-techs span:hover {
+
+    background: #ff0000;
+
+    color: #050505;
+
+    box-shadow:
+        0 0 10px #ff000050;
+}
+
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .experiencias {
+
+        padding: 80px 30px;
+    }
+
+    .experiencias-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .experiencias {
+
+        padding: 60px 20px;
+    }
+
+    .experiencias h2 {
+
+        font-size: 35px;
+
+        text-align: center;
+    }
+
+    .experiencias-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .experiencia-card {
+
+        padding: 25px;
+    }
+
+    .experiencia-card h3 {
+
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   MOBILE PEQUENO
+========================================= */
+
+@media (max-width: 480px) {
+
+    .experiencias {
+
+        padding: 50px 15px;
+    }
+
+    .experiencias h2 {
+
+        font-size: 28px;
+    }
+
+    .experiencia-card h3 {
+
+        font-size: 20px;
+    }
+
+    .experiencia-card p {
+
+        font-size: 14px;
+    }
+}
