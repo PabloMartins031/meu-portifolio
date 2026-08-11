@@ -8,7 +8,6 @@ const nome = document.querySelector("#nome");
 const email = document.querySelector("#email");
 const mensagem = document.querySelector("#mensagem");
 
-
 // =============================================
 // ENVIO DO FORMULÁRIO
 // =============================================
@@ -20,7 +19,6 @@ formulario.addEventListener("submit", async (event) => {
     const nomeValor = nome.value.trim();
     const emailValor = email.value.trim();
     const mensagemValor = mensagem.value.trim();
-
 
     // =============================================
     // VALIDAÇÃO
@@ -35,7 +33,6 @@ formulario.addEventListener("submit", async (event) => {
         return;
     }
 
-
     // =============================================
     // DADOS QUE SERÃO ENVIADOS PARA A API
     // =============================================
@@ -46,21 +43,20 @@ formulario.addEventListener("submit", async (event) => {
         mensagem: mensagemValor
     };
 
-
     try {
 
-        const resposta = await fetch("http://127.0.0.1:8000/contato/", {
+        const resposta = await fetch(
+            "https://meu-portifolio-production-dd2b.up.railway.app/contato/",
+            {
+                method: "POST",
 
-            method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(dados)
-
-        });
-
+                body: JSON.stringify(dados)
+            }
+        );
 
         // =============================================
         // VERIFICA SE A API RESPONDEU COM ERRO
@@ -76,11 +72,9 @@ formulario.addEventListener("submit", async (event) => {
 
         }
 
-
         const resultado = await resposta.json();
 
         console.log("Resposta da API:", resultado);
-
 
         // =============================================
         // SUCESSO
@@ -90,7 +84,6 @@ formulario.addEventListener("submit", async (event) => {
 
         formulario.reset();
 
-
     } catch (erro) {
 
         console.error("Erro:", erro);
@@ -99,7 +92,5 @@ formulario.addEventListener("submit", async (event) => {
             "Não foi possível enviar a mensagem. " +
             "Verifique se a API está funcionando."
         );
-
     }
-
 });
