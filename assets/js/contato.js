@@ -58,10 +58,6 @@ formulario.addEventListener("submit", async (event) => {
             }
         );
 
-        // =============================================
-        // VERIFICA SE A API RESPONDEU COM ERRO
-        // =============================================
-
         if (!resposta.ok) {
 
             const erro = await resposta.text();
@@ -75,10 +71,6 @@ formulario.addEventListener("submit", async (event) => {
         const resultado = await resposta.json();
 
         console.log("Resposta da API:", resultado);
-
-        // =============================================
-        // SUCESSO
-        // =============================================
 
         alert("Mensagem enviada com sucesso!");
 
