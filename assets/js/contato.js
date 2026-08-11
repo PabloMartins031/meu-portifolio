@@ -15,18 +15,16 @@ const mensagem = document.querySelector("#mensagem");
 
 formulario.addEventListener("submit", async (event) => {
 
-    // Impede o recarregamento da página
     event.preventDefault();
 
-    // Remove espaços extras
     const nomeValor = nome.value.trim();
     const emailValor = email.value.trim();
     const mensagemValor = mensagem.value.trim();
 
 
-    // =========================================
+    // =============================================
     // VALIDAÇÃO
-    // =========================================
+    // =============================================
 
     if (
         nomeValor === "" ||
@@ -38,9 +36,9 @@ formulario.addEventListener("submit", async (event) => {
     }
 
 
-    // =========================================
-    // DADOS
-    // =========================================
+    // =============================================
+    // DADOS QUE SERÃO ENVIADOS PARA A API
+    // =============================================
 
     const dados = {
         nome: nomeValor,
@@ -51,45 +49,44 @@ formulario.addEventListener("submit", async (event) => {
 
     try {
 
-        // =====================================
-        // ENVIA PARA A API FASTAPI
-        // =====================================
+        const resposta = await fetch("http://127.0.0.1:8000/contato/", {
 
-        const resposta = await fetch(
-            "http://127.0.0.1:8000/contato/",
-            {
-                method: "POST",
+            method: "POST",
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-                body: JSON.stringify(dados)
-            }
-        );
+            body: JSON.stringify(dados)
+
+        });
 
 
-        // =====================================
-        // VERIFICA RESPOSTA
-        // =====================================
+        // =============================================
+        // VERIFICA SE A API RESPONDEU COM ERRO
+        // =============================================
 
         if (!resposta.ok) {
 
-            throw new Error(
-                "Erro ao enviar contato."
-            );
+            const erro = await resposta.text();
+
+            console.error("Erro da API:", erro);
+
+            throw new Error("Erro ao enviar contato.");
 
         }
 
 
         const resultado = await resposta.json();
 
+        console.log("Resposta da API:", resultado);
 
-        // =====================================
+
+        // =============================================
         // SUCESSO
-        // =====================================
+        // =============================================
 
-        alert(resultado.mensagem);
+        alert("Mensagem enviada com sucesso!");
 
         formulario.reset();
 
@@ -99,7 +96,8 @@ formulario.addEventListener("submit", async (event) => {
         console.error("Erro:", erro);
 
         alert(
-            "Não foi possível enviar a mensagem. Verifique se a API está funcionando."
+            "Não foi possível enviar a mensagem. " +
+            "Verifique se a API está funcionando."
         );
 
     }
