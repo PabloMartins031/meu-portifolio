@@ -1,13 +1,8 @@
-
 // =============================================
 // FORMULÁRIO DE CONTATO
 // =============================================
 
 const formulario = document.querySelector("#contact-form");
-
-const nome = document.querySelector("#nome");
-const email = document.querySelector("#email");
-const mensagem = document.querySelector("#mensagem");
 
 // =============================================
 // ENVIO DO FORMULÁRIO
@@ -17,61 +12,59 @@ formulario.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
-    const nomeValor = nome.value.trim();
-    const emailValor = email.value.trim();
-    const mensagemValor = mensagem.value.trim();
-
     // =============================================
     // VALIDAÇÃO
     // =============================================
 
+    const nome = document.querySelector("#nome");
+    const email = document.querySelector("#email");
+    const mensagem = document.querySelector("#mensagem");
+
     if (
-        nomeValor === "" ||
-        emailValor === "" ||
-        mensagemValor === ""
+        nome.value.trim() === "" ||
+        email.value.trim() === "" ||
+        mensagem.value.trim() === ""
     ) {
         alert("Preencha todos os campos.");
         return;
     }
 
-    // =============================================
-    // DADOS DO FORMULÁRIO
-    // =============================================
-
-    const dados = {
-        nome: nomeValor,
-        email: emailValor,
-        mensagem: mensagemValor
-    };
-
     try {
+
+        // =============================================
+        // DADOS DO FORMULÁRIO
+        // =============================================
+
+        const dados = new FormData(formulario);
+
+        // =============================================
+        // ENVIO PARA O FORMSPREE
+        // =============================================
 
         const resposta = await fetch(
             "https://formspree.io/f/mwlkjddj",
             {
                 method: "POST",
-
+                body: dados,
                 headers: {
-                    "Content-Type": "application/json",
                     "Accept": "application/json"
-                },
-
-                body: JSON.stringify(dados)
+                }
             }
         );
 
         // =============================================
-        // VERIFICAÇÃO DA RESPOSTA
+        // RESPOSTA
         // =============================================
 
+        const resultado = await resposta.json();
+
+        console.log("Resposta do Formspree:", resultado);
+
         if (!resposta.ok) {
-
-            const erro = await resposta.json();
-
-            console.error("Erro do Formspree:", erro);
-
-            throw new Error("Erro ao enviar mensagem.");
-
+            throw new Error(
+                resultado.error ||
+                "Erro ao enviar mensagem."
+            );
         }
 
         // =============================================
@@ -90,7 +83,5 @@ formulario.addEventListener("submit", async (event) => {
             "Não foi possível enviar a mensagem. " +
             "Tente novamente mais tarde."
         );
-
     }
-
 });
