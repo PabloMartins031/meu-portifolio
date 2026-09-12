@@ -1,3 +1,4 @@
+
 // =============================================
 // FORMULÁRIO DE CONTATO
 // =============================================
@@ -34,7 +35,7 @@ formulario.addEventListener("submit", async (event) => {
     }
 
     // =============================================
-    // DADOS QUE SERÃO ENVIADOS PARA A API
+    // DADOS DO FORMULÁRIO
     // =============================================
 
     const dados = {
@@ -46,31 +47,36 @@ formulario.addEventListener("submit", async (event) => {
     try {
 
         const resposta = await fetch(
-            "https://meu-portifolio-production-dd2b.up.railway.app/contato/",
+            "https://formspree.io/f/mwlkjddj",
             {
                 method: "POST",
 
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
 
                 body: JSON.stringify(dados)
             }
         );
 
+        // =============================================
+        // VERIFICAÇÃO DA RESPOSTA
+        // =============================================
+
         if (!resposta.ok) {
 
-            const erro = await resposta.text();
+            const erro = await resposta.json();
 
-            console.error("Erro da API:", erro);
+            console.error("Erro do Formspree:", erro);
 
-            throw new Error("Erro ao enviar contato.");
+            throw new Error("Erro ao enviar mensagem.");
 
         }
 
-        const resultado = await resposta.json();
-
-        console.log("Resposta da API:", resultado);
+        // =============================================
+        // SUCESSO
+        // =============================================
 
         alert("Mensagem enviada com sucesso!");
 
@@ -82,7 +88,9 @@ formulario.addEventListener("submit", async (event) => {
 
         alert(
             "Não foi possível enviar a mensagem. " +
-            "Verifique se a API está funcionando."
+            "Tente novamente mais tarde."
         );
+
     }
+
 });
